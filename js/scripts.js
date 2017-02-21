@@ -4,10 +4,12 @@ $(function(){
 
     var height = parseInt($("#heightInput").val());
 
-    if (height >= 5) {
-      $("#tallRides").slideToggle();
-    } else {
+    if (height <= 5) {
       $("#shortRides").slideToggle();
+    } else {
+      $("#tallRides").slideToggle();
+      $("#shortRides").slideToggle();
+      $(".tooTall").hide();
     }
 
 
